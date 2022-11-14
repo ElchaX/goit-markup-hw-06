@@ -19,6 +19,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--text-color);
 }
+
 .section {
   padding-block: 94px;
 }
@@ -523,6 +524,10 @@ body {
   margin-left: calc(100% - 78px);
   margin-top: -32px;
 }
+.modal-btn:hover {
+  fill: var(--secondary-color);
+  stroke: var(--secondary-color);
+}
 .overflowContainer img {
   display: block;
 }
@@ -568,8 +573,9 @@ body {
   display: block;
 }
 
-.modal__label:has(.modal__input:focus) .modalIcon {
+.modalLabel:focus-within .modalIcon {
   fill: var(--secondary-color);
+  stroke: var(--secondary-color);
 }
 .modalInputTextarea {
   height: 120px;
@@ -582,15 +588,13 @@ body {
   color: rgba(117, 117, 117, 0.5);
   margin-bottom: 20px;
 }
-.modalCheckbox:checked {
-  outline: 0;
-  color: green;
-}
+
 .modalTerms {
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   position: relative;
+  line-height: 24px;
 }
 .modalSubmitButton {
   background-color: var(--secondary-color);
@@ -601,6 +605,81 @@ body {
   font-size: 16px;
   padding: 10px 42px;
   cursor: pointer;
-  justify-self: center;
   margin-top: 30px;
+  margin-left: calc(50% - 60px);
+}
+.modalCheckbox {
+  visibility: hidden;
+}
+.modalTerms svg {
+  fill: #ffffff;
+  background: #ffffff;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  transition: border 0.05s, fill 0.05s, background-color 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.modalCheckbox:checked + span svg {
+  background-color: var(--secondary-color);
+  border: 0;
+}
+.termsText {
+  position: relative;
+  bottom: 20px;
+  margin-left: 35px;
+}
+.newsletterHeader {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.newsletterButton {
+  border: 0;
+  border-radius: 4px;
+  margin: 0;
+  margin-left: 12px;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 50px;
+}
+.newsletterInput {
+  padding: 15px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  color: rgba(255, 255, 255);
+}
+.newsletterInput::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  height: 50px;
+}
+.newsletterIcon {
+  fill: #fff;
+  margin-left: 24px;
+}
+.newsletter {
+  display: inline-block;
+  margin-top: 72px;
 }
