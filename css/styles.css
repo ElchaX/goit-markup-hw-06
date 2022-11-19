@@ -628,11 +628,13 @@ body {
   border: 0;
 }
 .termsText {
+  display: block;
   position: relative;
   bottom: 20px;
   margin-left: 35px;
 }
 .newsletterHeader {
+  display: block;
   color: var(--main-color);
   font-weight: 700;
   font-size: 14px;
@@ -648,13 +650,13 @@ body {
   margin-left: 12px;
   display: inline-flex;
   align-items: center;
-  height: 50px;
-  width: 200px;
+  padding: 10px 28px 10px 42px;
   cursor: pointer;
   background-color: var(--secondary-color);
   color: var(--main-color);
   font-weight: 700;
   font-size: 16px;
+  line-height: 30px;
   padding-left: 50px;
 }
 .newsletterInput {
