@@ -633,6 +633,9 @@ body {
   bottom: 20px;
   margin-left: 35px;
 }
+.termsText a {
+  color: var(--secondary-color);
+}
 .newsletterHeader {
   display: block;
   color: var(--main-color);
